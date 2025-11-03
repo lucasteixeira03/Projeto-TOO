@@ -1,6 +1,5 @@
 from .Agendamento import Agendamento
 from .Tarefa import Tarefa
-from datetime import datetime
 
 class Compromisso(Agendamento, Tarefa):
     def __init__(self, titulo, descricao=None, data_hora_ini=None, data_hora_fim=None, local=None):
