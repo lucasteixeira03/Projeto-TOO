@@ -1,4 +1,13 @@
 # 📌 Projeto-TOO – Sistema de Tarefas e Agendamentos  
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue.svg" alt="Python 3.x">
+  <img src="https://img.shields.io/badge/POO-Orientada%20a%20Objetos-orange.svg" alt="POO">
+  <img src="https://img.shields.io/badge/Status-%20Finalizado-success.svg" alt="Status">
+  <img src="https://img.shields.io/badge/License-Acadêmico-lightgrey.svg" alt="Licença acadêmica">
+</p>
+
+
 ### **Disciplina: Tecnologia Orientada a Objetos (TOO) – BCC | IFSUL**
 
 Este projeto foi desenvolvido para a disciplina **Tecnologia Orientada a Objetos (TOO)** do curso de **Bacharelado em Ciência da Computação – IFSUL – Campus Passo Fundo**.  
@@ -15,13 +24,6 @@ Seu objetivo é demonstrar, na prática, a aplicação dos **princípios fundame
 - Padrões de criação (Factory Method)
 
 O sistema implementado permite manipular diferentes tipos de **tarefas**, **agendamentos** e **compromissos**, simulando diversos cenários práticos dentro da POO.
-
----
-
-# 📂 Estrutura do Projeto
-
-Conforme a estrutura real do repositório:
-
 
 ---
 
@@ -92,9 +94,63 @@ Para garantir valores válidos e evitar strings soltas no código.
 ### ✔️ 6. **Factory Method**
 
 `TarefaFactory.py` implementa um criador de tarefas baseado em:
-```
+
+```bash
 TarefaFactory.criar_tarefa(tipo_tarefa="pessoal", ...)
 ```
 Uma forma muito comum e importante de abstrair a criação de objetos.
 
 --- 
+
+## 🛠️ Como Executar o Projeto
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/SEU-USUARIO/Projeto-TOO.git
+```
+
+2. **Acesse a pasta do projeto:**
+
+```bash
+cd Projeto-TOO
+```
+
+3. **Dica: Certifique-se de estar com o Python configurado corretamente e execute sempre a partir da raiz do projeto.**
+
+---
+
+## 📚 Conteúdos Exercitados
+
+- **Classes**
+
+- **Objetos**
+
+- **Herança simples e múltipla**
+
+- **Encapsulamento e propriedades**
+
+- **Classes abstratas**
+
+- **Métodos abstratos**
+
+- **Polimorfismo**
+
+- **Módulos e organização de pastas**
+
+- **Padrão Factory Method**
+
+- **Manipulação de datas com datetime**
+
+- **Validação e limpeza de dados**
+
+---
+
+## 🏁 Conclusão
+
+#### Este projeto reúne e demonstra os conceitos essenciais da Programação Orientada a Objetos utilizando Python.
+#### Foi desenvolvido com foco em aprendizado, boa organização de código e clareza estrutural para facilitar manutenção e expansão.
+
+## 👨‍💻 Autor
+
+*Desenvolvido por Lucas de Sousa Teixeira.*
