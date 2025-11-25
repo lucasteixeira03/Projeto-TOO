@@ -1,9 +1,10 @@
 from model.TarefaFactory import TarefaFactory
 from model.Disciplina import Disciplina
+from model.TipoTarefaPessoal import TipoTarefaPessoal
 
 t1 = TarefaFactory.criar_tarefa(tipo_tarefa="pessoal",
                                titulo="Fazer caminhada",
-                               tipo="Saúde",
+                               tipo=TipoTarefaPessoal.SAUDE,
                                 descricao="Caminhar 30 minutos na gare",
                                 data_realizacao="09-10-2025")
 

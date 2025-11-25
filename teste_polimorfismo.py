@@ -4,8 +4,9 @@ from model.TarefaProfissional import TarefaProfissional
 from model.TarefaEscolar import TarefaEscolar
 from model.Disciplina import Disciplina
 from model.TarefaPessoal import TarefaPessoal
+from model.TipoTarefaPessoal import TipoTarefaPessoal
 
-t1 = TarefaPessoal("Limpar casa")
+t1 = TarefaPessoal("Limpar casa", tipo=TipoTarefaPessoal.FAMILIA, descricao="Limpar a casa toda no sábado de manhã")
 
 
 t2 = TarefaGamer(titulo="Coletar item X")

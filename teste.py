@@ -3,6 +3,7 @@ from model.TarefaEscolar import TarefaEscolar
 from model.TarefaProfissional import TarefaProfissional
 from model.Disciplina import Disciplina
 from model.TarefaPessoal import TarefaPessoal
+from model.TipoTarefaPessoal import TipoTarefaPessoal  
 
 
 
@@ -33,7 +34,7 @@ print(tProfissional.exibir_dados())
 print("\n\n")
 tpessoal = TarefaPessoal(
         titulo="Fazer caminhada",
-        tipo="Saúde",
+        tipo=TipoTarefaPessoal.SAUDE,
         descricao="Caminhar 30 minutos na gare",
         data_realizacao="09-10-2025"
     )

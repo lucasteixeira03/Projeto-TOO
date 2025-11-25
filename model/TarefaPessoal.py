@@ -1,36 +1,28 @@
 from .Tarefa import Tarefa
 from .StatusTarefa import StatusTarefa
+from .TipoTarefaPessoal import TipoTarefaPessoal
 from datetime import datetime
 
 class TarefaPessoal(Tarefa):
-    def __init__(self, titulo, tipo=None, descricao=None, data_realizacao=None, status = StatusTarefa.A_FAZER):
+    def __init__(self, titulo, tipo: TipoTarefaPessoal, descricao=None, data_realizacao=None, status=StatusTarefa.A_FAZER):
         super().__init__(titulo, descricao=descricao, data_realizacao=data_realizacao, status=status)
-        self.tipo = tipo  # Exemplo: "Saúde", "Estudos", "Lazer" etc.
+        self.tipo = tipo
 
-    # --- Encapsulamento ---
     @property
     def tipo(self):
-        return self.__tipo
+        return self._tipo
 
     @tipo.setter
-    def tipo(self, tp_tarefa):
-        self.__tipo = tp_tarefa.strip().title() if tp_tarefa else None
+    def tipo(self, valor):
+        if isinstance(valor, TipoTarefaPessoal):
+            self._tipo = valor
+        else:
+            raise TypeError("Tipo deve ser um valor do Enum TipoTarefaPessoal.")
 
-    # --- Método especial ---
-    def __str__(self):
-        tipo_str = f" - Tipo: {self.tipo}" if self.tipo else ""
-        return f"[Tarefa Pessoal] {super().__str__()}{tipo_str}"
-
-    # --- Sobrescrita de método ---
-    def exibir_dados(self):
-        """
-        Sobrescreve o método exibir_dados() da classe Tarefa
-        para incluir o tipo da tarefa pessoal.
-        """
-        base = super().exibir_dados()  # reutiliza exibição da classe mãe
-        tipo = f"Tipo: {self.tipo}\n" if self.tipo else ""
-        return f"{base}\n{tipo}"
-        
     def definir_termino(self):
         self.data_realizacao = datetime.now()
-   
+
+    def exibir_dados(self):
+        base = super().exibir_dados()
+        txt = f"Tipo de tarefa pessoal: {self.tipo.value}"
+        return f"{base}\n{txt}"
