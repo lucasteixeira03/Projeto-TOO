@@ -26,3 +26,4 @@ class TarefaGamer(Tarefa):
         txt_gamer += f"\nJogo: {self.jogo}"
         return f"{base}\n{txt_gamer}"
     
+    
